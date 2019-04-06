@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IndianCricketTeam" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="juA-Be-LJh" userLabel="titleView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indian Cricket Team" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmL-bU-f6E">
+                                        <rect key="frame" x="94.5" y="18" width="186" height="24"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="textColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="vmL-bU-f6E" firstAttribute="centerX" secondItem="juA-Be-LJh" secondAttribute="centerX" id="1WM-aK-Bsi"/>
+                                    <constraint firstAttribute="height" constant="60" id="Hfw-hm-IEl"/>
+                                    <constraint firstItem="vmL-bU-f6E" firstAttribute="centerY" secondItem="juA-Be-LJh" secondAttribute="centerY" id="eo7-Jt-2Hl"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yhj-IG-wKy">
+                                <rect key="frame" x="0.0" y="60" width="375" height="607"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="playerCell" rowHeight="107" id="3To-BL-EOs" customClass="playerCell" customModule="IndianCricketTeam" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="107"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3To-BL-EOs" id="rwT-IT-6xv">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="106.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rohit" translatesAutoresizingMaskIntoConstraints="NO" id="anL-B5-Htp">
+                                                    <rect key="frame" x="15" y="5" width="125" height="91"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="125" id="fyK-5r-aOT"/>
+                                                        <constraint firstAttribute="height" constant="91" id="upi-Og-iGz"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rohit" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tuk-Zn-gfh">
+                                                    <rect key="frame" x="163" y="43" width="39.5" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="anL-B5-Htp" firstAttribute="leading" secondItem="rwT-IT-6xv" secondAttribute="leading" constant="15" id="WUD-lH-fbO"/>
+                                                <constraint firstItem="Tuk-Zn-gfh" firstAttribute="centerY" secondItem="rwT-IT-6xv" secondAttribute="centerY" id="aGE-I5-c0S"/>
+                                                <constraint firstItem="Tuk-Zn-gfh" firstAttribute="leading" secondItem="anL-B5-Htp" secondAttribute="trailing" constant="23" id="bFk-bm-lP0"/>
+                                                <constraint firstItem="anL-B5-Htp" firstAttribute="top" secondItem="rwT-IT-6xv" secondAttribute="top" constant="5" id="kZB-aa-BkQ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="playerImage" destination="anL-B5-Htp" id="ig2-iJ-vPd"/>
+                                            <outlet property="playerName" destination="Tuk-Zn-gfh" id="M3q-tJ-nAG"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="hqK-Ey-HIW"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="2Gy-vm-i5G"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yhj-IG-wKy" secondAttribute="bottom" id="3YJ-M0-Lq1"/>
+                            <constraint firstItem="yhj-IG-wKy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="6B2-aM-Rwg"/>
+                            <constraint firstItem="yhj-IG-wKy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FA9-aq-a0m"/>
+                            <constraint firstItem="juA-Be-LJh" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Lh0-WY-6YZ"/>
+                            <constraint firstAttribute="trailing" secondItem="juA-Be-LJh" secondAttribute="trailing" id="Skb-gU-emy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yhj-IG-wKy" secondAttribute="trailing" id="bR7-8Z-IIR"/>
+                            <constraint firstItem="juA-Be-LJh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="yCl-aj-pUk"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Rohit" width="569.25" height="316.5"/>
+    </resources>
+</document>

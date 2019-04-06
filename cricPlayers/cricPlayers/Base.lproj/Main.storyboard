@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="cricPlayers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSd-EQ-iH6">
+                                <rect key="frame" x="0.0" y="637" width="131" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="Gbh-Mw-jJy"/>
+                                    <constraint firstAttribute="height" constant="30" id="sVc-0m-hwZ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Sachin">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YgO-cD-kLE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bbt-My-bsA">
+                                <rect key="frame" x="131" y="634" width="131" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="OvE-Hp-1s8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Dhoni">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zBu-sx-aLK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8FO-kE-urh">
+                                <rect key="frame" x="262" y="634" width="131" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="131" id="oZw-Pv-YDx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Kohli">
+                                    <color key="titleColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="S0b-i1-0yj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rjT-3e-zTR">
+                                <rect key="frame" x="34" y="197" width="307" height="272"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Bbt-My-bsA" firstAttribute="width" secondItem="WSd-EQ-iH6" secondAttribute="width" id="5NC-ue-itd"/>
+                            <constraint firstItem="Bbt-My-bsA" firstAttribute="baseline" secondItem="8FO-kE-urh" secondAttribute="baseline" id="Aqf-JL-MSX"/>
+                            <constraint firstItem="rjT-3e-zTR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="D1N-Ri-qCw"/>
+                            <constraint firstItem="WSd-EQ-iH6" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Dhs-4v-ZWG"/>
+                            <constraint firstItem="Bbt-My-bsA" firstAttribute="baseline" secondItem="8FO-kE-urh" secondAttribute="firstBaseline" id="F20-2w-BG7"/>
+                            <constraint firstItem="8FO-kE-urh" firstAttribute="leading" secondItem="Bbt-My-bsA" secondAttribute="trailing" id="GHO-yq-BtY"/>
+                            <constraint firstItem="WSd-EQ-iH6" firstAttribute="baseline" secondItem="Bbt-My-bsA" secondAttribute="baseline" id="Giv-4I-8E0"/>
+                            <constraint firstItem="WSd-EQ-iH6" firstAttribute="baseline" secondItem="Bbt-My-bsA" secondAttribute="firstBaseline" id="JLR-7f-ZNC"/>
+                            <constraint firstItem="8FO-kE-urh" firstAttribute="width" secondItem="WSd-EQ-iH6" secondAttribute="width" id="PpC-qt-Dt3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="rjT-3e-zTR" secondAttribute="bottom" constant="198" id="R0Q-DQ-LOZ"/>
+                            <constraint firstItem="Bbt-My-bsA" firstAttribute="baseline" secondItem="WSd-EQ-iH6" secondAttribute="firstBaseline" id="WcS-S3-JcK"/>
+                            <constraint firstItem="WSd-EQ-iH6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="aBD-ML-Mak"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rjT-3e-zTR" secondAttribute="trailing" constant="34" id="hBB-dg-6rP"/>
+                            <constraint firstAttribute="trailing" secondItem="8FO-kE-urh" secondAttribute="trailing" constant="-18" id="jc7-Z8-eRJ"/>
+                            <constraint firstItem="rjT-3e-zTR" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="177" id="zo2-tW-S7N"/>
+                            <constraint firstItem="Bbt-My-bsA" firstAttribute="leading" secondItem="WSd-EQ-iH6" secondAttribute="trailing" id="zyd-o0-gTN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="dhoniTab" destination="Bbt-My-bsA" id="I3p-oY-z32"/>
+                        <outlet property="kohliTab" destination="8FO-kE-urh" id="Wbg-p9-aGH"/>
+                        <outlet property="playerImage" destination="rjT-3e-zTR" id="s30-ud-Dnv"/>
+                        <outlet property="sachinTab" destination="WSd-EQ-iH6" id="8v9-nd-2aj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>

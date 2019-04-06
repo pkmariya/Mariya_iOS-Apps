@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ButtonAlignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1r-o4-Cvy">
+                                <rect key="frame" x="145.5" y="318.5" width="84" height="30"/>
+                                <state key="normal" title="Hello World!"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gkZ-Hi-P2X"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgZ-27-GDa">
+                                <rect key="frame" x="165.5" y="268.5" width="44" height="30"/>
+                                <state key="normal" title="Yellow"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="81l-Op-JED"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wiN-sZ-n8O">
+                                <rect key="frame" x="166.5" y="368.5" width="42" height="30"/>
+                                <state key="normal" title="Green"/>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iEM-7q-qLs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wiN-sZ-n8O" firstAttribute="top" secondItem="I1r-o4-Cvy" secondAttribute="bottom" constant="20" id="PL7-E9-fF6"/>
+                            <constraint firstItem="wiN-sZ-n8O" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ao2-RV-5dv"/>
+                            <constraint firstItem="I1r-o4-Cvy" firstAttribute="top" secondItem="kgZ-27-GDa" secondAttribute="bottom" constant="20" id="eF3-K8-dC0"/>
+                            <constraint firstItem="I1r-o4-Cvy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fRz-uY-9pJ"/>
+                            <constraint firstItem="kgZ-27-GDa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tES-I6-yN5"/>
+                            <constraint firstItem="I1r-o4-Cvy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uS1-AI-Kn5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="greenButton" destination="wiN-sZ-n8O" id="GYv-Aw-VVU"/>
+                        <outlet property="helloworldButton" destination="I1r-o4-Cvy" id="QWF-hK-qQW"/>
+                        <outlet property="yellowButton" destination="kgZ-27-GDa" id="0Nh-1P-JvP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
