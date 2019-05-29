@@ -59,10 +59,17 @@
                                     <action selector="readTheText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="84z-a0-qS9"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Uq9-4z-lwA">
+                                <rect key="frame" x="0.0" y="604" width="375" height="63"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dGy-LG-TsX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2xT-LF-FrL"/>
+                            <constraint firstItem="Uq9-4z-lwA" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CFB-mB-1jv"/>
                             <constraint firstItem="StS-oR-BTz" firstAttribute="firstBaseline" secondItem="Pdn-te-OrM" secondAttribute="baseline" constant="20" symbolType="layoutAnchor" id="Cpr-kA-o7I"/>
                             <constraint firstItem="StS-oR-BTz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KE9-qh-Xox"/>
                             <constraint firstItem="egr-8Y-h2i" firstAttribute="top" secondItem="dGy-LG-TsX" secondAttribute="bottom" constant="26.5" id="L3E-4B-HQQ"/>
@@ -73,8 +80,11 @@
                             <constraint firstItem="egr-8Y-h2i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dT3-5X-rDe"/>
                             <constraint firstItem="dGy-LG-TsX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="e08-G1-Fic"/>
                             <constraint firstItem="dGy-LG-TsX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gS8-On-UAh"/>
+                            <constraint firstItem="Uq9-4z-lwA" firstAttribute="top" secondItem="egr-8Y-h2i" secondAttribute="bottom" constant="8" id="h91-Sy-QRf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pdn-te-OrM" secondAttribute="trailing" id="jXT-oD-vOg"/>
                             <constraint firstItem="StS-oR-BTz" firstAttribute="top" secondItem="Pdn-te-OrM" secondAttribute="bottom" id="kuN-Zp-yGQ"/>
+                            <constraint firstItem="Uq9-4z-lwA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oAH-xs-DXR"/>
+                            <constraint firstItem="Uq9-4z-lwA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wgd-H2-Yer"/>
                             <constraint firstItem="dGy-LG-TsX" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.6" id="zyi-Oz-Ftv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -83,6 +93,7 @@
                         <outlet property="segmentCtr" destination="StS-oR-BTz" id="Aep-Aq-Cv0"/>
                         <outlet property="startStopButton" destination="Pdn-te-OrM" id="cM9-sR-dc5"/>
                         <outlet property="textView" destination="dGy-LG-TsX" id="A83-aZ-QhN"/>
+                        <outlet property="userStoryText" destination="Uq9-4z-lwA" id="04s-Nc-a4d"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

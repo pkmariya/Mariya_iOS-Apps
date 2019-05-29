@@ -19,6 +19,12 @@ class ViewController: UIViewController {
         lableText.text = "Clicked"
         lableText.backgroundColor = UIColor.black
         lableText.textColor = UIColor.white
+        
+        performSegue(withIdentifier: "goToSecondScreen", sender: self)
+    }
+    
+    @IBAction func goToThirdScreenBtnPressed(_ sender: Any) {
+        performSegue(withIdentifier: "goToThirdScreen", sender: self)
     }
 }
 

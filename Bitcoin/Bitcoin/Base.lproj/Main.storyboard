@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bitcoin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BitcoinImage" translatesAutoresizingMaskIntoConstraints="NO" id="OdE-07-CFI">
+                                <rect key="frame" x="117" y="35" width="141" height="91"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gFU-r3-bZ5">
+                                <rect key="frame" x="117" y="217" width="141" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="VB0-X7-idf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXN-LL-0C7">
+                                <rect key="frame" x="0.0" y="412" width="375" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="8bC-Xf-vdC" id="mMa-fE-4fH"/>
+                                    <outlet property="delegate" destination="8bC-Xf-vdC" id="uiK-aI-Fvh"/>
+                                </connections>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OdE-07-CFI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="4En-uy-H2M"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fXN-LL-0C7" secondAttribute="bottom" constant="39" id="5gp-TI-J0Z"/>
+                            <constraint firstItem="fXN-LL-0C7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GFB-zv-H9W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gFU-r3-bZ5" secondAttribute="trailing" constant="117" id="HAa-vk-F0I"/>
+                            <constraint firstItem="fXN-LL-0C7" firstAttribute="top" secondItem="gFU-r3-bZ5" secondAttribute="bottom" constant="168" id="NCZ-h3-eGC"/>
+                            <constraint firstItem="gFU-r3-bZ5" firstAttribute="top" secondItem="OdE-07-CFI" secondAttribute="bottom" constant="91" id="Yec-LP-iXY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OdE-07-CFI" secondAttribute="trailing" constant="117" id="ZIy-2C-drs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gFU-r3-bZ5" secondAttribute="bottom" constant="423" id="dAd-Eb-yQh"/>
+                            <constraint firstItem="OdE-07-CFI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="fOK-4A-meQ"/>
+                            <constraint firstItem="gFU-r3-bZ5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="hgQ-og-qaF"/>
+                            <constraint firstItem="fXN-LL-0C7" firstAttribute="centerX" secondItem="gFU-r3-bZ5" secondAttribute="centerX" id="iRP-1C-yTg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="currencyPicker" destination="fXN-LL-0C7" id="BAh-1E-7st"/>
+                        <outlet property="priceLabel" destination="gFU-r3-bZ5" id="mTA-iG-Ek4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="BitcoinImage" width="1280" height="1280"/>
+    </resources>
+</document>

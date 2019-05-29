@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,6 +41,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="npz-Mh-sGO">
+                                <rect key="frame" x="110" y="436" width="161" height="39"/>
+                                <color key="backgroundColor" red="1" green="0.83234566450000003" blue="0.47320586440000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Go to 3rd Screen">
+                                    <color key="titleColor" red="0.57874745130000005" green="0.32151988149999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goToThirdScreenBtnPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XQq-SD-2i9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -48,9 +59,12 @@
                             <constraint firstItem="3Cp-Yf-wZV" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="8h0-HM-MvO"/>
                             <constraint firstItem="JlS-Gu-YpF" firstAttribute="centerX" secondItem="3Cp-Yf-wZV" secondAttribute="centerX" id="S89-ac-PH8"/>
                             <constraint firstItem="bA0-br-KIQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ViN-au-ape"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="npz-Mh-sGO" secondAttribute="trailing" constant="104" id="YVl-fY-iUf"/>
                             <constraint firstItem="JlS-Gu-YpF" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="138" id="bFO-gH-hFm"/>
+                            <constraint firstItem="npz-Mh-sGO" firstAttribute="top" secondItem="3Cp-Yf-wZV" secondAttribute="bottom" constant="71.5" id="g4V-b3-mtU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bA0-br-KIQ" secondAttribute="bottom" id="gUR-uK-hzz"/>
                             <constraint firstItem="3Cp-Yf-wZV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="gZS-Js-Gps"/>
+                            <constraint firstItem="npz-Mh-sGO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="h9R-ul-elv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bA0-br-KIQ" secondAttribute="trailing" id="q7C-fN-AKM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -58,11 +72,43 @@
                     <connections>
                         <outlet property="clickMe" destination="3Cp-Yf-wZV" id="Dxd-vL-mc4"/>
                         <outlet property="lableText" destination="JlS-Gu-YpF" id="K3O-6B-Dkw"/>
+                        <segue destination="13J-Oh-fSO" kind="show" identifier="goToSecondScreen" id="3rr-AQ-f2J"/>
+                        <segue destination="RVf-iy-ICJ" kind="showDetail" identifier="goToThirdScreen" id="aK2-nX-7N4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="74" y="183"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bNd-gc-fOF">
+            <objects>
+                <viewController id="13J-Oh-fSO" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v09-xM-P7A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.45138680930000002" green="0.99309605359999997" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="Y3a-uE-mHl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xpY-Fq-jnp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="794" y="-31"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aHp-C0-iF8">
+            <objects>
+                <viewController id="RVf-iy-ICJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTw-IC-M39">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.49327188729999999" blue="0.47399842739999998" alpha="0.54026648119999998" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="ZQv-FB-m1O"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7f-YA-zJO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1052" y="416"/>
         </scene>
     </scenes>
 </document>

@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var startStopButton: UIButton!
     @IBOutlet weak var segmentCtr: UISegmentedControl!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var userStoryText: UITextView!
     
     private var speechRecognizer = SFSpeechRecognizer(locale: Locale.init(identifier: "en_US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
@@ -161,12 +162,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func readTheText(_ sender: UIButton) {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+                try audioSession.setCategory(AVAudioSession.Category.playback)
+        } catch {
+            print("audioSession properties weren't set")
+        }
+        
         let utterence = AVSpeechUtterance(string: textView.text)
         utterence.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterence.rate = 0.5
         
         let synthesizer = AVSpeechSynthesizer()
         synthesizer.speak(utterence)
+        
+        createUserStory();
+    }
+    
+    func createUserStory() {
+        let userStory: String = "As an User, I want to " + textView.text + " so that customer can benefit from it."
+        userStoryText.text = userStory
     }
 }
 
